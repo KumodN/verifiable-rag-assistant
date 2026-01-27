@@ -5,7 +5,7 @@ from langchain_community.vectorstores import Chroma
 from langchain_community.embeddings import OllamaEmbeddings
 
 # 1. SETTINGS
-PDF_PATH = "data/KUMOD DE SILVA Resume.pdf"
+PDF_PATH = "data/policies/Lending_Policy_2026.pdf"
 DB_PATH = "chroma_db"
 
 def ingest_docs():

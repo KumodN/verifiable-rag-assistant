@@ -1,13 +1,9 @@
 import streamlit as st
 from src.rag_engine import query_rag
 
-st.set_page_config(
-    page_title="Verifiable RAG Assistant",
-    page_icon="🤖",
-    layout="centered"
-)
-st.title("🤖 Verifiable AI Research Assistant")
-st.caption("Powered by Llama 3.2 | Local RAG System")
+st.set_page_config(page_title="Vault-AI | Secure Banking", page_icon="🔒")
+st.title("Vault-AI: Commercial Lending System")
+st.caption("SECURE TERMINAL | RESTRICTED ACCESS | AUTH: LOCALHOST")
 
 
 if "messages" not in st.session_state:
