@@ -33,5 +33,5 @@ This is the recommended way to run the application to ensure all dependencies ar
 ### Quick Start
 1. Clone the repository:
    ```bash
-   git clone [https://github.com/YOUR_USERNAME/verifiable-rag-assistant.git](https://github.com/YOUR_USERNAME/verifiable-rag-assistant.git)
+   git clone [https://github.com/KumodN/verifiable-rag-assistant.git](https://github.com/KumodN/verifiable-rag-assistant.git)
    cd verifiable-rag-assistant
