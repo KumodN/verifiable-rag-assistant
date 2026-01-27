@@ -7,8 +7,9 @@ from langchain_core.prompts import ChatPromptTemplate
 DB_PATH = "chroma_db"
 EMBEDDING_MODEL = "mxbai-embed-large"
 CHAT_MODEL = "llama3.2:3b"
+OLLAMA_URL = os.getenv("OLLAMA_BASE_URL", "http://localhost:11434")
 
-embeddings = OllamaEmbeddings(model=EMBEDDING_MODEL)
+embeddings = OllamaEmbeddings(model=EMBEDDING_MODEL, base_url=OLLAMA_URL)
 vector_db = Chroma(persist_directory=DB_PATH, embedding_function=embeddings)
 
 retriever = vector_db.as_retriever(search_kwargs={"k": 3})
@@ -26,7 +27,7 @@ Question:
 """
 
 prompt = ChatPromptTemplate.from_template(template)
-llm = ChatOllama(model=CHAT_MODEL)
+llm = ChatOllama(model=CHAT_MODEL, base_url=OLLAMA_URL)
 
 def query_rag(question_text):
     results = retriever.invoke(question_text)

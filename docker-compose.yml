@@ -1,0 +1,11 @@
+services:
+  ai-assistant:
+    build: .
+    container_name: verifiable-rag
+    ports:
+      - "8501:8501"
+    environment:
+      - OLLAMA_BASE_URL=http://host.docker.internal:11434
+    volumes:
+      - ./data:/app/data
+      - ./chroma_db:/app/chroma_db
